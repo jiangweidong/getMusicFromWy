@@ -95,7 +95,7 @@ class speader_main(object):
         songinfo = {}
         song_id = songid[songid.find('=') + 1:]
         commentUrl = "http://music.163.com/weapi/v1/resource/comments/R_SO_4_" + str(song_id) + "/?csrf_token="
-        data = self.loginwy.loginwy('a1627060419@163.com', '.zcy1314')
+        data = self.loginwy.loginwy('', '')
         result = requests.post(commentUrl, headers=headers, data=data)
         jsonstr = result.json()['total']
         songinfo['href'] = self.BASE_URL + songid
